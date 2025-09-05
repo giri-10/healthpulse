@@ -13,9 +13,12 @@ const Index = () => {
   };
   
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      {/* Main page background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-50 via-blue-100/70 to-sky-100/50 dark:from-slate-900 dark:via-blue-900/30 dark:to-slate-900/80 -z-10"></div>
+      
       {/* Navigation Bar */}
-      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 relative z-10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Heart className="h-6 w-6 text-primary" />
@@ -44,12 +47,9 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-16 md:py-24">
-        {/* Simple background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background to-secondary/20 z-0"></div>
-        
-        {/* Subtle background element */}
-        <div className="absolute top-1/4 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl z-0"></div>
-        <div className="absolute bottom-1/4 left-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl z-0"></div>
+        {/* Enhanced glow effects */}
+        <div className="absolute top-1/4 right-10 w-96 h-96 bg-blue-300/20 dark:bg-blue-500/10 rounded-full blur-3xl z-0"></div>
+        <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-sky-300/20 dark:bg-sky-500/10 rounded-full blur-3xl z-0"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -110,12 +110,9 @@ const Index = () => {
 
       {/* Features Section */}
       <section id="features" className="py-20 relative overflow-hidden">
-        {/* Background elements */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-background via-secondary/20 to-background/90 z-0"></div>
-        
         {/* Decorative elements */}
-        <div className="absolute top-40 right-[20%] w-60 h-60 bg-primary/5 rounded-full blur-3xl animate-pulse-slow z-0"></div>
-        <div className="absolute bottom-40 left-[10%] w-72 h-72 bg-health-normal/5 rounded-full blur-3xl animate-pulse-slow z-0"></div>
+        <div className="absolute top-40 right-[20%] w-96 h-96 bg-blue-300/20 dark:bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow z-0"></div>
+        <div className="absolute bottom-40 left-[10%] w-96 h-96 bg-sky-300/20 dark:bg-sky-500/10 rounded-full blur-3xl animate-pulse-slow z-0"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 z-10">
           <div className="text-center mb-16">
@@ -189,12 +186,9 @@ const Index = () => {
 
       {/* Benefits Section */}
       <section id="benefits" className="py-20 relative overflow-hidden">
-        {/* Background elements */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-background/90 via-accent/5 to-background z-0"></div>
-        
         {/* Decorative elements */}
-        <div className="absolute top-1/3 right-[15%] w-72 h-72 bg-accent/5 rounded-full blur-3xl animate-pulse-slow z-0"></div>
-        <div className="absolute bottom-1/4 left-[10%] w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse-slow z-0"></div>
+        <div className="absolute top-1/3 right-[15%] w-96 h-96 bg-blue-300/20 dark:bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow z-0"></div>
+        <div className="absolute bottom-1/4 left-[10%] w-96 h-96 bg-sky-300/20 dark:bg-sky-500/10 rounded-full blur-3xl animate-pulse-slow z-0"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 z-10">
           <div className="text-center mb-16">
@@ -308,13 +302,10 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
-        {/* Background elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 z-0"></div>
-        
         {/* Animated shapes */}
-        <div className="absolute top-10 left-[30%] w-40 h-40 bg-primary/10 rounded-full blur-2xl animate-pulse-slow z-0"></div>
-        <div className="absolute bottom-10 right-[20%] w-60 h-60 bg-accent/10 rounded-full blur-3xl animate-pulse-slow z-0"></div>
-        <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-health-normal/5 rounded-full blur-3xl animate-pulse-slow z-0"></div>
+        <div className="absolute top-10 left-[30%] w-96 h-96 bg-blue-300/20 dark:bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow z-0"></div>
+        <div className="absolute bottom-10 right-[20%] w-96 h-96 bg-sky-300/20 dark:bg-sky-500/10 rounded-full blur-3xl animate-pulse-slow z-0"></div>
+        <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-blue-300/20 dark:bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow z-0"></div>
         
         <div className="relative max-w-4xl mx-auto px-6 text-center z-10">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
@@ -334,8 +325,9 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-card py-12 border-t">
-        <div className="max-w-7xl mx-auto px-6">
+      <footer className="py-12 border-t relative">
+        <div className="absolute inset-0 bg-blue-50/70 dark:bg-slate-900/90 backdrop-blur-sm -z-10"></div>
+        <div className="max-w-7xl mx-auto px-6 relative">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
 
